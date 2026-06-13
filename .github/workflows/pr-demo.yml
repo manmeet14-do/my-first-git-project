@@ -1,0 +1,13 @@
+name: PR demo
+
+on:
+ pull_request
+
+
+jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: PR validation
+        run: echo "Pull request trigrred sucssfullyy!"
