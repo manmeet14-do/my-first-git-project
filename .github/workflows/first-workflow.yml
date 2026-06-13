@@ -1,18 +1,23 @@
 name: My first workflow
 
-
 on:
- push:
-   branches:
+  push:
+    branches:
       - main
-
 
 jobs:
   hello:
     runs-on: ubuntu-latest
 
-
-
     steps:
-      - name: print message
-        run: echo "Hello Manmeet ! Github Actions is working" 
+      - name: Step 1
+        run: echo "Starting Workflow"
+
+      - name: Show Date
+        run: date
+
+      - name: Show Current User
+        run: whoami
+
+      - name: Show Linux Version
+        run: uname -a
