@@ -1,40 +1,26 @@
-name: multi Job workflow
-
+name: Env demo
 
 
 on:
- push:
-   branches:
-     - main
+  workflow_dispatch:
 
 
 jobs:
-  test:
-   runs-on: ubuntu-latest
+  demo:
+    runs-on: ubuntu-latest
 
 
-   steps:
-      - name: testing
-        run: echo "Runnning Test"
-     
-  build:
-   needs: test
-   runs-on: ubuntu-latest
-  
- 
-   steps:
-      - name: building
-        run: echo "Building app"
+    env:
+      APP_NAME: my-app
+      ENVIRONMENT: dev
 
 
-  deploy:
-   needs: build
-   runs-on: ubuntu-latest 
+
+    steps:
+      - name: print variables
+        run: |
+          echo "Application: $APP_NAME"
+          echo "environment: $ENVIRONMENT"
 
 
-   steps:
-      - name: deploying
-        run: echo "Deploying app" 
-  
 
- 
