@@ -1,4 +1,5 @@
-name: leaving checkout
+name: multi Job workflow
+
 
 
 on:
@@ -8,25 +9,32 @@ on:
 
 
 jobs:
-  demo:
-    runs-on: ubuntu-latest
+  test:
+   runs-on: ubuntu-latest
 
 
-    steps:
-     - name: checkout repo
-       uses: actions/checkout@v4
-
-
-     - name: print current directory
-       run: pwd
-   
+   steps:
+      - name: testing
+        run: echo "Runnning Test"
      
-     - name: list files
-       run: ls -la
+  build:
+   needs: test
+   runs-on: ubuntu-latest
+  
+ 
+   steps:
+      - name: building
+        run: echo "Building app"
 
-     - name: show git version
-       run: git --version
+
+  deploy:
+   needs: build
+   runs-on: ubuntu-latest 
 
 
+   steps:
+      - name: deploying
+        run: echo "Deploying app" 
+  
 
  
