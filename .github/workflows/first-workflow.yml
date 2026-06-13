@@ -8,11 +8,11 @@ on:
 
 
 jobs:
-   demo:
-     runs-on: ububtu-latest
+  demo:
+    runs-on: ubuntu-latest
 
 
-   steps:
+    steps:
      - name: checkout repo
        uses: actions/checkout@v4
 
