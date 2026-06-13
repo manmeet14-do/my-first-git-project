@@ -1,23 +1,32 @@
-name: My first workflow
+name: leaving checkout
+
 
 on:
-  push:
-    branches:
-      - main
+ push:
+   branches:
+     - main
+
 
 jobs:
-  hello:
-    runs-on: ubuntu-latest
+   demo:
+     runs-on: ububtu-latest
 
-    steps:
-      - name: Step 1
-        run: echo "Starting Workflow"
 
-      - name: Show Date
-        run: date
+   steps:
+     - name: checkout repo
+       uses: actions/checkout@v4
 
-      - name: Show Current User
-        run: whoami
 
-      - name: Show Linux Version
-        run: uname -a
+     - name: print current directory
+       run: pwd
+   
+     
+     - name: list files
+       run: ls -la
+
+     - name: show git version
+       run: git --version
+
+
+
+ 
