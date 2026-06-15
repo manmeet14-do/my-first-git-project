@@ -17,6 +17,34 @@ jobs:
     - name: Running ENVIRONMENT
       run: echo "My Application name is $APP_NAME and env is $ENVIRONMENT"
 
+  build:
+   needs: hello
+    runs-on: ubuntu-latest
+
+   steps:
+    - name: Building Application
+      run: echo "Building application"
+
+  testing:
+   needs: build
+    runs-on: ubuntu-latest
+  
+   steps:
+    - name: Running Test
+      run: echo "Running Tests"
+
+
+  deploy:
+   needs: testing
+    runs-on: ubuntu-latest
+
+   steps:
+    - name: Deploying application
+      run: echo "Deploying application"
+  
+ 
+
+
 
      
     
