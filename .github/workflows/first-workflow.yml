@@ -19,7 +19,7 @@ jobs:
 
   build:
    needs: hello
-    runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
 
    steps:
     - name: Building Application
@@ -27,7 +27,7 @@ jobs:
 
   testing:
    needs: build
-    runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
   
    steps:
     - name: Running Test
@@ -36,7 +36,7 @@ jobs:
 
   deploy:
    needs: testing
-    runs-on: ubuntu-latest
+   runs-on: ubuntu-latest
 
    steps:
     - name: Deploying application
