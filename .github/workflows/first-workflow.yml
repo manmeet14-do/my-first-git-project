@@ -20,21 +20,21 @@ jobs:
         run: echo "Runing Test"
 
    build:
-     need: hello
-      runs-on: ubuntu-latest
+     needs: hello
+     runs-on: ubuntu-latest
 
-      steps:
-       - name: bulding
-         run: echo Building"
+     steps:
+      - name: bulding
+        run: echo Building"
  
        
    deploying:
      need: build
-      runs-on: ubutnu-latest
+     runs-on: ubutnu-latest
 
-      steps:
-        - name: deploying
-          run: echo "deploying"
+     steps:
+       - name: deploying
+         run: echo "deploying"
      
 
 
