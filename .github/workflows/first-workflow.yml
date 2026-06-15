@@ -14,9 +14,16 @@ jobs:
     runs-on: ubuntu-latest
 
 
+
     steps:
      - name: hello to workflow
        run: echo "Welcome manmeet"
+    
+     - name: checkout Repo
+       uses: actions/checkout@v4
+
+     - name: list files and directory
+       run: ls -la
 
      - name: present working directory
        run: pwd
