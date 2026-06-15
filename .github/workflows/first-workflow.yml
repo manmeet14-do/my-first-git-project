@@ -61,4 +61,4 @@ jobs:
    
    steps:
     - name: Employee information
-      run: echo "length of the value is ${#EMP_ID }"
+      run: echo "length of the value is ${#EMP_ID}"
