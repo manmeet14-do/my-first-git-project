@@ -19,11 +19,11 @@ jobs:
      - name: testing
        run: echo "Testing"
 
-    build:
+   build:
      - name: building
        run: echo "building"
 
-    deploying:
+   deploying:
      - name: deploying
        run: echo "deploying"
      
