@@ -15,26 +15,18 @@ jobs:
 
 
 
-    steps:
-     - name: hello to workflow
-       run: echo "Welcome manmeet"
-    
-     - name: checkout Repo
-       uses: actions/checkout@v4
+   steps:
+    - name: testing
+      run: echo "Testing"
 
-     - name: list files and directory
-       run: ls -la
+   build:
+    - name: building
+      run: echo "building"
 
-     - name: present working directory
-       run: pwd
-
-     - name: Show current user
-       run: whoami
-
-     - name: show linux version
-       run: uname -a
-
-
+   deploying:
+    - name: deploying
+      run: echo "deploying"
+     
 
 
 
