@@ -25,7 +25,7 @@ jobs:
 
      steps:
       - name: bulding
-        run: echo Building"
+        run: echo "Building"
  
        
    deploying:
