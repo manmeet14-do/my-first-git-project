@@ -1,26 +1,20 @@
-name: Env demo
+name: Secrets
 
 
 on:
-  workflow_dispatch:
+ push:
+  branches:
+    - main
 
 
 jobs:
-  demo:
-    runs-on: ubuntu-latest
+  secrets_demo
+  runs_on: ubuntu_latest
 
+  steps:
 
-    env:
-      APP_NAME: my-app
-      ENVIRONMENT: dev
-
-
-
-    steps:
-      - name: print variables
-        run: |
-          echo "Application: $APP_NAME"
-          echo "environment: $ENVIRONMENT"
-
-
-
+   - name: login to docker hub
+     run: docker login -u $USERNAME -p $PASSWORD
+     env:
+      USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      PASSWORD; ${{ secrets.DOCKER_PASSWORD }}
