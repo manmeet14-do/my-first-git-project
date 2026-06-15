@@ -9,10 +9,9 @@ on:
 
 jobs:
   secrets_demo:
-  runs_on: ubuntu_latest
+   runs_on: ubuntu_latest
 
   steps:
-
    - name: login to docker hub
      run: docker login -u $USERNAME -p $PASSWORD
      env:
