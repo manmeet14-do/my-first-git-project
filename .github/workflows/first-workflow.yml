@@ -3,9 +3,7 @@ name: My first workflow
 
 
 on:
- push:
-  branches:
-    - main
+ workflow-dispatch:
 
 
 
@@ -13,11 +11,17 @@ jobs:
    hello:
      runs-on: ubuntu-latest
 
+     env:
+       APP_NAME: my_app
+       ENVIRONMENT: dev
+
 
 
      steps:
       - name: testing
-        run: echo "Runing Test"
+        run: |
+          echo "Application: $APP_NAME"
+          echo "Environment: $ENVIRONMENT"
 
    build:
      needs: hello
