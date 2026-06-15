@@ -42,7 +42,24 @@ jobs:
     - name: Deploying application
       run: echo "Deploying application"
   
+ company_info:
+   needs: deploy
+   runs-on: ubuntu-latest
+
+
+   steps:
+    - name: Company information
+      run: echo "My company Name is ${{ vars.COMPANY_NAME }}"
+
  
+ employee_info:
+   needs: company_info
+   runs-on: ubuntu-latest
+   
+   steps:
+    - name: Employee information
+      run: echo "length of the value is ${{ #secret.EMPLOYEE_ID }}"
+
 
 
 
