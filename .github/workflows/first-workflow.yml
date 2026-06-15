@@ -42,7 +42,7 @@ jobs:
     - name: Deploying application
       run: echo "Deploying application"
   
- company_info:
+  company_info:
    needs: deploy
    runs-on: ubuntu-latest
 
@@ -52,7 +52,7 @@ jobs:
       run: echo "My company Name is ${{ vars.COMPANY_NAME }}"
 
  
- employee_info:
+  employee_info:
    needs: company_info
    runs-on: ubuntu-latest
    
