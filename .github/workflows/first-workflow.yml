@@ -1,4 +1,5 @@
-name: Secrets
+name: My first workflow
+
 
 
 on:
@@ -8,15 +9,15 @@ on:
 
 
 
-
-
 jobs:
-  secrets_demo:
-   runs-on: ubuntu-latest
+   hello:
+    runs-on: ubuntu-latest
 
-   steps:
-    - name: Login to Docker Hub
-      run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-      env:
-       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+    steps:
+     - name: hello to workflow
+       run: echo "Welcome manmeet"
+
+
+
+
