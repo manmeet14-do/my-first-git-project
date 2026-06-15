@@ -1,25 +1,24 @@
-name: Secret Test
+name: all topics
+
 
 on:
-  workflow_dispatch:
+ workflow_dispatch
+
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  hello
+  runs-on: ubuntu-latest
 
-    env:
-      USERNAME: ${{ vars.D_USERNAME }}
+   env:
+    APP_NAME: dolly_App
+    ENVIRONMENT: dev
 
-    steps:
-      - name: Check Secret Length
-        run: |
-          echo "Length: ${#USERNAME}"       
-
-     
-
+   steps:
+    name: Running ENVIRONMENT
+    run: echo "My Application name is $APP_NAME and env is $ENVIRONMENT"
 
 
      
-
+    
 
 
