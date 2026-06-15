@@ -16,7 +16,7 @@ jobs:
 
    steps:
     - name: login to docker hub
-      run: docker login -u $USERNAME -p $PASSWORD
+      run: echo "$PASSWORD" | docker login -u "$USERNAME" --password-stdin
       env:
        USERNAME: ${{ secrets.DOCKER_USERNAME }}
        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
