@@ -18,6 +18,18 @@ jobs:
      - name: hello to workflow
        run: echo "Welcome manmeet"
 
+     - name: present working directory
+       run: pwd
+
+     - name: Show current user
+       run: whoami
+
+     - name: show linux version
+       run: uname -a
+
+
+
+
 
 
 
