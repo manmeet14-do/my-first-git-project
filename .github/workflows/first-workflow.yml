@@ -9,7 +9,7 @@ on:
 
 jobs:
   secrets_demo:
-   runs-on: ubuntu_latest
+   runs-on: ubuntu-latest
 
    steps:
     - name: login to docker hub
