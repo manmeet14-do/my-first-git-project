@@ -5,18 +5,18 @@ name: My first workflow
 on:
  workflow_dispatch:
 
+env:
+  APP_NAME: my_app
+  ENVIRONMENT: dev
+  USERNAME: ${{ secrets.DOCKER_USERNAME }}
+
+
 
 
 jobs:
    hello:
      runs-on: ubuntu-latest
 
-     env:
-       APP_NAME: my_app
-       ENVIRONMENT: dev
-
-     env:
-       USERNAME: ${{ secrets.DOCKER_USERNAME }}
        
 
      steps:
@@ -46,6 +46,8 @@ jobs:
    environment:
      needs: build
      runs-on: ubuntu-latest
+
+
      
      steps:
        - name: print username
