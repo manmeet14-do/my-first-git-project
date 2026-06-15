@@ -15,7 +15,9 @@ jobs:
        APP_NAME: my_app
        ENVIRONMENT: dev
 
-
+     env:
+       USERNAME: echo "Username is ${{ secrets.DOCKER_USERNAME }}"
+       
 
      steps:
       - name: testing
