@@ -2,11 +2,11 @@ name: all topics
 
 
 on:
- workflow_dispatch
+ workflow_dispatch:
 
 
 jobs:
-  hello
+  hello:
    runs-on: ubuntu-latest
 
    env:
