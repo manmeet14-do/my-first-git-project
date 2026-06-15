@@ -1,60 +1,25 @@
-name: My first workflow
-
-
+name: Secret Test
 
 on:
- workflow_dispatch:
-
-env:
-  APP_NAME: my_app
-  ENVIRONMENT: dev
-  USERNAME: ${{ secrets.DOCKER_USERNAME }}
-
-
-
+  workflow_dispatch:
 
 jobs:
-   hello:
-     runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
-       
+    env:
+      USERNAME: ${{ secrets.DOCKER_USERNAME }}
 
-     steps:
-      - name: testing
+    steps:
+      - name: Check Secret Length
         run: |
-          echo "Application: $APP_NAME"
-          echo "Environment: $ENVIRONMENT"
+          echo "Length: ${#USERNAME}"       
 
-   build:
-     needs: hello
-     runs-on: ubuntu-latest
-
-     steps:
-      - name: bulding
-        run: echo "Building"
- 
-       
-   deploying:
-     needs: build
-     runs-on: ubuntu-latest
-
-     steps:
-       - name: deploying
-         run: echo "deploying"
      
 
-   environment:
-     needs: build
-     runs-on: ubuntu-latest
 
 
      
-     steps:
-       - name: print username
-         run: echo "Username is $USERNAME"
-
-
-
 
 
 
