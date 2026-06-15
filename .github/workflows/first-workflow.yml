@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      USERNAME: ${{ secrets.D_USERNAME }}
+      USERNAME: ${{ vars.D_USERNAME }}
 
     steps:
       - name: Check Secret Length
