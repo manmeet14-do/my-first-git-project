@@ -8,7 +8,7 @@ on:
 
 
 jobs:
-  secrets_demo
+  secrets_demo:
   runs_on: ubuntu_latest
 
   steps:
