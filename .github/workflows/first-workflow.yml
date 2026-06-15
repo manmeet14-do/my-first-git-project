@@ -16,7 +16,7 @@ jobs:
        ENVIRONMENT: dev
 
      env:
-       USERNAME: echo "Username is ${{ secrets.DOCKER_USERNAME }}"
+       USERNAME: ${{ secrets.DOCKER_USERNAME }}
        
 
      steps:
@@ -42,6 +42,15 @@ jobs:
        - name: deploying
          run: echo "deploying"
      
+
+   environment:
+     needs: build
+     runs-on: ubuntu-latest
+     
+     steps:
+       - name: print username
+         run: echo "Username is $USERNAME"
+
 
 
 
