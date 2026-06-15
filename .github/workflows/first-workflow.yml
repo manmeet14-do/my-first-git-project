@@ -14,8 +14,8 @@ jobs:
     ENVIRONMENT: dev
 
    steps:
-    name: Running ENVIRONMENT
-    run: echo "My Application name is $APP_NAME and env is $ENVIRONMENT"
+    - name: Running ENVIRONMENT
+      run: echo "My Application name is $APP_NAME and env is $ENVIRONMENT"
 
 
      
