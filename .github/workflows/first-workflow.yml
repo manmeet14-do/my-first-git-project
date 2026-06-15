@@ -30,7 +30,7 @@ jobs:
        
    deploying:
      needs: build
-     runs-on: ubutnu-latest
+     runs-on: ubuntu-latest
 
      steps:
        - name: deploying
