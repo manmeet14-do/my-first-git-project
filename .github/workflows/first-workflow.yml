@@ -47,8 +47,9 @@ jobs:
    runs-on: ubuntu-latest
 
 
+
    steps:
-    - name: Company information
+    - name: variable check Company information
       run: echo "My company Name is ${{ vars.COMPANY_NAME }}"
 
  
@@ -58,7 +59,7 @@ jobs:
    
    steps:
     - name: Employee information
-      run: echo "length of the value is ${{ #secret.EMPLOYEE_ID }}"
+      run: echo "length of the value is ${#secrets.EMPLOYEE_ID }"
 
 
 
