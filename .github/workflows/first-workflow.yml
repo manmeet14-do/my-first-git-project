@@ -11,21 +11,30 @@ on:
 
 jobs:
    hello:
-    runs-on: ubuntu-latest
+     runs-on: ubuntu-latest
 
 
 
-    steps:
-     - name: testing
-       run: echo "Testing"
+     steps:
+      - name: testing
+        run: echo "Runing Test"
 
    build:
-     - name: building
-       run: echo "building"
+     need: hello
+      runs-on: ubuntu-latest
 
+      steps:
+       - name: bulding
+         run: echo Building"
+ 
+       
    deploying:
-     - name: deploying
-       run: echo "deploying"
+     need: build
+      runs-on: ubutnu-latest
+
+      steps:
+        - name: deploying
+          run: echo "deploying"
      
 
 
