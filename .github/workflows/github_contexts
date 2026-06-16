@@ -3,9 +3,7 @@ name: github contexts
 
 
 on:
- push:
-  branches:
-    - main
+ workflow_dispatch:
 
 jobs:
   demo-context
