@@ -25,11 +25,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
 
-     steps:
-       - name: Download artifact
-         uses: actions/download-artifact@v4
-         with:
-           name: app-file
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: app-file
        
-       - name: display file content
-         run: cat app.txt      
+      - name: display file content
+        run: cat app.txt      
