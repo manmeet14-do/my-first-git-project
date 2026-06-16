@@ -10,9 +10,9 @@ jobs:
    runs-on: ubuntu-latest
 
 
-steps:
-   - name: print context information
-     run: |
+   steps:
+    - name: print context information
+      run: |
        echo "Actor : ${{ github.actor }}"
        echo "repository : ${{ github.repository }}"
        echo "branch : ${{ github.ref }}"
