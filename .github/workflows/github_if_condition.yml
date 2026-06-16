@@ -9,12 +9,12 @@ on:
 
 
 jobs:
-  demo-if:
+  demo_if:
     runs-on: ubuntu-latest
     
     steps:
       - name: If condition runnin
-        if: github.event = = 'push'
+        if: github.event_name == 'push'
         run: echo "Deploying"
 
 
