@@ -1,0 +1,27 @@
+name: github contexts
+
+
+
+on:
+ push:
+  branches:
+    - main
+
+jobs:
+  demo-context
+   runs-on: ubuntu-latest
+
+
+steps:
+   - name: print context information
+     run: |
+       echo "Actor : ${{ github.actor }}"
+       echo "repository : ${{ github.repository }}"
+       echo "branch : ${{ github.ref }}"
+       echo "commit : ${{ github.sha }}"
+       echo "Event : ${{ github.event_name }}"
+       
+  
+
+
+
