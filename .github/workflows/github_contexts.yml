@@ -6,7 +6,7 @@ on:
  workflow_dispatch:
 
 jobs:
-  demo-context
+  demo-context:
    runs-on: ubuntu-latest
 
 
