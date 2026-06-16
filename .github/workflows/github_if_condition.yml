@@ -1,0 +1,24 @@
+name: if condition
+
+
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  demo-if:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: If condition runnin
+        if: github.event = = 'push'
+        run: echo "Deploying"
+
+
+
+
+
+
